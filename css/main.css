@@ -1,0 +1,539 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+/*///////////////////////////////////////////////////////////////////////////////*/
+*{
+    box-sizing: border-box;
+}
+:focus{
+    outline: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #434343;
+}
+.container{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*/////////////////////////////////////////////////////////////*/
+header{
+    background: #393939 url('../img/noise.png');
+}
+.logo{
+    margin-top: 25px;
+}
+.nav{
+    float: right;
+}
+.nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav li{
+    display: inline-block;
+    padding: 25px 15px;
+}
+.nav a{
+    color: #abaaaa; 
+    padding: 7px;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+.nav a:hover{
+    color: #dbd1be;
+    padding: 7px;
+    background-color: #474747;
+    box-shadow: inset 2px 0 3px #323232;
+    border-radius: 5px;
+    border: 1px solid #474747;
+}
+/*/////////////////////////////////////////////////////////////////*/
+.intro{
+    background: #d3cab8 url('../img/paterrn.png');
+    padding-top: 25px;
+    padding-bottom: 55px;  
+    position: relative; 
+}
+.intro::after{
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 100%;
+    top: 335px;
+    background: #393939 url('../img/noise.png');
+    border-bottom: 5px solid #5a5a5a ;
+}
+.block{
+    float: left;
+    width: 400px;
+    position: relative;
+}
+.block:before {
+  position: absolute;
+    content: '';
+    display: inline-block;
+    background-image: url(../img/flower.png);
+    width: 200px;
+    height: 86px;
+    background-repeat: no-repeat;
+    top: 150px;
+    left: 200px;
+}
+
+
+.carousel{
+    position: relative;
+    width: 490px;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: right;
+    border: 10px solid transparent;
+    box-shadow: 0 5px 39px -3px;
+    border-radius: 15px;
+}
+.carousel:after{
+    position: absolute;
+    padding: 20px ;
+    content: 'Lorem ipsum dolor sit amet,  Dolorem explicabo esse  itaque, quae officiis quis quo.';
+    font-size: 12px;
+    color: #bfbfbf;
+    width: 420px;
+    height: 50px;
+    top: 145px;
+    background-color: rgba(0, 0, 0, .5)
+}
+.slaid img{
+  height: 235px;
+  width: 460px;
+}
+h1 {
+    font-size: 24px;
+  
+   
+}
+p{
+    font-size: 14px;
+}
+
+/*////////////////////////////////////////////////////////////////////*/
+
+.content{
+    display: flex;
+    justify-content: center;
+    background-color: #fbf5ea;
+    padding-bottom: 60px;
+}
+
+.column{
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.column ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2 { 
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    font-size: 21px;
+}
+
+ h2:before{
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 30px;
+    left: -5px;
+    top: 30px;
+    background-image: url('../img/line.png');
+    background-repeat: no-repeat;
+}
+
+h4{
+    display: inline-block;
+    margin: 0;
+    font-size: 15px;
+}
+/*.................*/
+
+.col-left{
+    width: 285px;
+    
+}
+/*.................*/
+
+.col-center{
+    width: 355px;
+}
+
+.col-center h2:before{
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 30px;
+    left: 30px;
+    top: 30px;
+    background-image: url('../img/line.png');
+    background-repeat: no-repeat;
+}
+
+.col-center img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .3)
+}
+
+.col-center h4{
+    margin-top: 25px;
+}
+
+/*................*/
+
+.col-right{
+    width: 295px;
+}
+
+.col-right ul{
+    padding-top: 60px;
+    color: #353535;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+.col-right li:hover{
+    background-color: #484848;
+    color: #fbf5ea;
+    border-radius: 10px;
+}
+/*................*/
+
+.block-item{
+    position: relative;
+    padding: 60px 10px 50px 10px;
+    
+}
+
+.block-item p{
+    font-size: 12px;
+}
+
+.col-left .block-item::before{
+    position: absolute;
+    content: '';
+    width: 125px;
+    border: 1px dashed #afaba4 ;
+    top: 255px;
+    left: 0;
+}
+
+.col-center .block-item::before{
+    position: absolute;
+    content: '';
+    width: 50%;
+    border: 1px dashed #afaba4;
+    top: 381px;
+    left: 13px;
+}
+
+/*///////////////////////////////////////////////////////////////////*/
+
+.newsletter{
+    background: #393939 url('../img/noise.png');
+    color: #d8d8d8;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.newsletter h2{
+    color: #fff;
+}
+input{
+    padding: 6px;
+    font-size: 12px;
+    width: 206px;
+    border: none;
+}
+button{
+    background: #fff;
+    border: none;
+    margin-left: -4px;
+    padding-bottom: 3px;
+}
+
+/*////////////////////////////////////////////////////////////////////*/
+
+footer{
+    background: #393939 url('../img/noise.png');
+   padding: 30px 60px;
+}
+.social ul{
+    margin: 0;
+    padding: 0;
+}
+.social li{
+    display: inline-block;
+}
+.social a {
+    background-image: url('../img/images/sprite-social.png');
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+}
+.cr{
+    background-position: 0 0;
+}
+ .zz {
+    background-position: -18px 0;
+ }
+                    
+.xx{
+    background-position: -40px 0;
+}
+.vv {
+    background-position: -62px 0;
+}                 
+.fb{
+    background-position: -82px 0;
+}
+.tw{
+    background-position: -102px 0;
+}
+.bb {
+    background-position: -123px 0;
+}               
+.menu{
+    display: inline-block;
+}             
+.menu ul{
+    margin: 0;
+    padding: 0;
+    width: 450px;
+
+
+}
+.menu li {
+   display: inline-block;
+    background: #1f1f1f url(../img/noise.png);
+    width: 140px;
+    margin: 1px;
+    padding: 5px 5px;
+}
+.menu a{
+    color: #fff;
+    text-decoration: none;
+}
+.logo-ft{
+    float: right;
+}
+.logo-ft img{
+    margin-left: 155px;
+}
+.logo-ft p{
+    color: #d8d8d8;
+}
+
+/* ==========================================================================
+    style button and icons
+   ========================================================================== */
+
+/*...........BUTTON.............*/
+
+.button  {
+    display: inline-block;
+    background: linear-gradient(to bottom, #fefefe 0%, #e5e4e4 100%);
+    color: #404040;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 30px;
+    text-decoration: none;
+    border: 3px solid transparent;
+}
+.button:focus{
+    border:3px inset #fefefe;
+}
+.block-item  a.button{
+    float: right;
+    padding: 0 15px;
+    box-shadow: 0 0 18px 0px rgba(0, 0, 0, .5);
+}
+
+.block-item .button:hover{
+  color: #fbf5ea;
+  background: linear-gradient(to bottom, #484848 0%, #a29fa2 100%);
+}
+.block-item  a.button:focus{
+    border:3px inset #a29fa2 ;
+    box-shadow: none;
+}    
+
+/*...............................*/
+
+/*........ICONS...................................................*/
+span.icon {
+    position: relative;
+    display: inline-block;
+    background-image: url(../img/images/sprit-icons_02.png);
+    background-position: -7px -161px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    top: 6px;
+}
+
+/*=====================*/
+.column h2 span {
+    background-position: -5px -13px;
+}
+.column:nth-child(2) h2 span{
+    background-position: -5px -45px ;
+    margin-left: 35px;
+}
+.column:nth-child(3) h2 span{
+    background-position: -5px -131px ;
+}
+/*======================*/
+
+.col-center .block-item span{
+    background-position: -5px -70px;
+    margin: 0;
+}
+
+/*======================*/
+
+.column .button span{
+    background-position: -5px -155px;
+}
+/*=====================*/
+
+ .col-right li span{
+    background-position: -5px -95px;
+}
+/*====================*/
+
+.col-right .newsletter h2 span{
+    background-position: -5px -190px;
+    margin-right: 10px;
+}
+/*.................................................................*/
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
