@@ -16,70 +16,6 @@ html {
     line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -90,7 +26,11 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
-/*///////////////////////////////////////////////////////////////////////////////*/
+
+
+/* ==========================================================================
+   My style
+   ========================================================================== */
 *{
     box-sizing: border-box;
 }
@@ -348,6 +288,9 @@ h4{
 .newsletter h2{
     color: #fff;
 }
+.newsletter h2:before{
+    background-image: none;
+}    
 input{
     padding: 6px;
     font-size: 12px;
@@ -359,6 +302,7 @@ button{
     border: none;
     margin-left: -4px;
     padding-bottom: 3px;
+    padding-top: 2px;
 }
 
 /*////////////////////////////////////////////////////////////////////*/
@@ -457,6 +401,7 @@ footer{
 .block-item  a.button{
     float: right;
     padding: 0 15px;
+    border:none;
     box-shadow: 0 0 18px 0px rgba(0, 0, 0, .5);
 }
 
@@ -464,11 +409,6 @@ footer{
   color: #fbf5ea;
   background: linear-gradient(to bottom, #484848 0%, #a29fa2 100%);
 }
-.block-item  a.button:focus{
-    border:3px inset #a29fa2 ;
-    box-shadow: none;
-}    
-
 /*...............................*/
 
 /*........ICONS...................................................*/
