@@ -32,7 +32,8 @@ html {
    My style
    ========================================================================== */
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 :focus{
     outline: none;
@@ -50,7 +51,7 @@ body{
     padding-right: 10px;
 }
 /*/////////////////////////////////////////////////////////////*/
-header{
+.site-header{
     background: #393939 url('../img/noise.png');
 }
 .logo{
@@ -78,7 +79,8 @@ header{
     color: #dbd1be;
     padding: 7px;
     background-color: #474747;
-    box-shadow: inset 2px 0 3px #323232;
+    -webkit-box-shadow: inset 2px 0 3px #323232;
+            box-shadow: inset 2px 0 3px #323232;
     border-radius: 5px;
     border: 1px solid #474747;
 }
@@ -94,7 +96,7 @@ header{
     content: '';
     height: 30px;
     width: 100%;
-    top: 335px;
+    top: 100%;
     background: #393939 url('../img/noise.png');
     border-bottom: 5px solid #5a5a5a ;
 }
@@ -111,7 +113,7 @@ header{
     width: 200px;
     height: 86px;
     background-repeat: no-repeat;
-    top: 150px;
+    top: 70%;
     left: 200px;
 }
 
@@ -123,7 +125,8 @@ header{
     padding-right: 5px;
     float: right;
     border: 10px solid transparent;
-    box-shadow: 0 5px 39px -3px;
+    -webkit-box-shadow: 0 5px 39px -3px;
+            box-shadow: 0 5px 39px -3px;
     border-radius: 15px;
 }
 .carousel:after{
@@ -143,8 +146,6 @@ header{
 }
 h1 {
     font-size: 24px;
-  
-   
 }
 p{
     font-size: 14px;
@@ -153,8 +154,12 @@ p{
 /*////////////////////////////////////////////////////////////////////*/
 
 .content{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: #fbf5ea;
     padding-bottom: 60px;
 }
@@ -188,7 +193,7 @@ h2 {
     background-repeat: no-repeat;
 }
 
-h4{
+b{
     display: inline-block;
     margin: 0;
     font-size: 15px;
@@ -221,10 +226,11 @@ h4{
     margin-left: auto;
     margin-right: auto;
     border: 4px solid #fff;
-    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .3)
+    -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, .3);
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, .3)
 }
 
-.col-center h4{
+.col-center b{
     margin-top: 25px;
 }
 
@@ -248,32 +254,14 @@ h4{
 }
 /*................*/
 
-.block-item{
-    position: relative;
+.block-item{/*
+    position: relative;*/
     padding: 60px 10px 50px 10px;
     
 }
 
 .block-item p{
     font-size: 12px;
-}
-
-.col-left .block-item::before{
-    position: absolute;
-    content: '';
-    width: 125px;
-    border: 1px dashed #afaba4 ;
-    top: 255px;
-    left: 0;
-}
-
-.col-center .block-item::before{
-    position: absolute;
-    content: '';
-    width: 50%;
-    border: 1px dashed #afaba4;
-    top: 381px;
-    left: 13px;
 }
 
 /*///////////////////////////////////////////////////////////////////*/
@@ -302,12 +290,12 @@ button{
     border: none;
     margin-left: -4px;
     padding-bottom: 3px;
-    padding-top: 2px;
+     padding-top: 1px;
 }
 
 /*////////////////////////////////////////////////////////////////////*/
 
-footer{
+.site-footer{
     background: #393939 url('../img/noise.png');
    padding: 30px 60px;
 }
@@ -385,7 +373,9 @@ footer{
 /*...........BUTTON.............*/
 
 .button  {
+    position: relative;
     display: inline-block;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#e5e4e4));
     background: linear-gradient(to bottom, #fefefe 0%, #e5e4e4 100%);
     color: #404040;
     padding: 5px 15px;
@@ -395,6 +385,22 @@ footer{
     text-decoration: none;
     border: 3px solid transparent;
 }
+.col-left .button::before{
+    position: absolute;
+    content: '';
+    width: 125px;
+    border: 1px dashed #afaba4 ;
+    top: 100%;
+    left: -145px;
+}
+.col-center .button::before{
+    position: absolute;
+    content: '';
+    width: 125px;
+    border: 1px dashed #afaba4;
+    top: 100%;
+    left: -220px;
+}
 .button:focus{
     border:3px inset #fefefe;
 }
@@ -402,11 +408,13 @@ footer{
     float: right;
     padding: 0 15px;
     border:none;
-    box-shadow: 0 0 18px 0px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 18px 0px rgba(0, 0, 0, .5);
+            box-shadow: 0 0 18px 0px rgba(0, 0, 0, .5);
 }
 
 .block-item .button:hover{
   color: #fbf5ea;
+  background: -webkit-gradient(linear, left top, left bottom, from(#484848), to(#a29fa2));
   background: linear-gradient(to bottom, #484848 0%, #a29fa2 100%);
 }
 /*...............................*/
